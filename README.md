@@ -4,7 +4,7 @@
 |Column|Type|Options|
 |------|----|-------|
 |id|integer|null: false,foreign_key: true|
-|user_name|VARCHAR|null: false,foreign_key: true|
+|name|string|null: false,foreign_key: true|
 |mail|integer|null: false,foreign_key: true|
 |pass|integer|null: false|
 
@@ -17,7 +17,7 @@
 |Column|Type|Options|
 |------|----|-------|
 |id|integer|null: false,foreign_key: true|
-|group_name|VARCHAR|null: false,foreign_key: true|
+|name|string|null: false,foreign_key: true|
 
 ### Association
 - belongs_to :user
@@ -41,10 +41,10 @@
 |Column|Type|Options|
 |------|----|-------|
 |id|integer|null: false,foreign_key: true|
-|chat_txt|VARCHAR||
-|img|BLOB||
+|content|string||
+|img|string||
 |user_id|integer|null: false|
-|created_at|DATETIME|null: false|
+|created_at|datetime|null: false|
 
 ### Association
 - belongs_to :user
