@@ -9,7 +9,7 @@
 ### Association
 - has_many : user_groups
 - has_many : groups, through: :user_groups
-- has_many : chat
+- has_many : messages
 
 
 ## groupsテーブル
@@ -33,7 +33,7 @@
 - belongs_to :groups
 
 
-## chatテーブル
+## messagesテーブル
 |Column|Type|Options|
 |------|----|-------|
 |content|string||
