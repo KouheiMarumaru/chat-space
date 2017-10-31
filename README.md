@@ -3,50 +3,43 @@
 ## userテーブル
 |Column|Type|Options|
 |------|----|-------|
-|id|integer|null: false,foreign_key: true|
-|name|string|null: false,foreign_key: true|
-|mail|integer|null: false,foreign_key: true|
-|pass|integer|null: false|
+|name|string|null: false|
+|mail|integer|null: false|
 
 ### Association
-- belongs_to :group
-- belongs_to :user_group
+- has_many : user_groups
+- has_many : groups, through: :user_groups
+- has_many : chat
 
 
-## groupテーブル
+## groupsテーブル
 |Column|Type|Options|
 |------|----|-------|
-|id|integer|null: false,foreign_key: true|
-|name|string|null: false,foreign_key: true|
+|name|string|null: false|
+
+### Association
+- has_many : user
+- has_many : user, through: :user_groups
+
+
+## user_groups関連テーブル
+|Column|Type|Options|
+|------|----|-------|
+|user_id|integer|null: false,foreign_key: true|
+|groups_id|integer|null: false,foreign_key: true|
 
 ### Association
 - belongs_to :user
-- belongs_to :user_group
-
-
-## user_group関連テーブル
-|Column|Type|Options|
-|------|----|-------|
-|id|integer|null: false,foreign_key: true|
-|user_id|integer|null: false|
-|group_id|integer|null: false|
-
-### Association
-- belongs_to :user
-- belongs_to :group
-- belongs_to :user_group
+- belongs_to :groups
 
 
 ## chatテーブル
 |Column|Type|Options|
 |------|----|-------|
-|id|integer|null: false,foreign_key: true|
 |content|string||
 |img|string||
-|user_id|integer|null: false|
-|created_at|datetime|null: false|
+|user_id|integer|null: false,foreign_key: true|
 
 ### Association
 - belongs_to :user
-- belongs_to :group
 
