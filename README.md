@@ -4,7 +4,7 @@
 |Column|Type|Options|
 |------|----|-------|
 |name|string|null: false,unique: true,index: true|
-|mail|integer|null: false,unique: true|
+|mail|string|null: false,unique: true|
 
 ### Association
 - has_many : users_groups
