@@ -3,8 +3,8 @@
 ## usersテーブル
 |Column|Type|Options|
 |------|----|-------|
-|name|string|null: false|
-|mail|integer|null: false|
+|name|string|null: false,unique: true|
+|mail|integer|null: false,unique: true|
 
 ### Association
 - has_many : users_groups
