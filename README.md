@@ -3,7 +3,7 @@
 ## usersテーブル
 |Column|Type|Options|
 |------|----|-------|
-|name|string|null: false,unique: true|
+|name|string|null: false,unique: true,add_index :users,:name|
 |mail|integer|null: false,unique: true|
 
 ### Association
@@ -20,7 +20,7 @@
 ### Association
 - has_many : users
 - has_many : users, through: :users_groups
-
+- has_many : messages
 
 ## users_groups関連テーブル
 |Column|Type|Options|
@@ -42,4 +42,5 @@
 
 ### Association
 - belongs_to :users
+- belongs_to :groups
 
