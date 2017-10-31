@@ -1,14 +1,14 @@
 # README
 
-## userテーブル
+## usersテーブル
 |Column|Type|Options|
 |------|----|-------|
 |name|string|null: false|
 |mail|integer|null: false|
 
 ### Association
-- has_many : user_groups
-- has_many : groups, through: :user_groups
+- has_many : users_groups
+- has_many : groups, through: :users_groups
 - has_many : messages
 
 
@@ -18,18 +18,18 @@
 |name|string|null: false|
 
 ### Association
-- has_many : user
-- has_many : user, through: :user_groups
+- has_many : users
+- has_many : users, through: :users_groups
 
 
-## user_groups関連テーブル
+## users_groups関連テーブル
 |Column|Type|Options|
 |------|----|-------|
-|user_id|integer|null: false,foreign_key: true|
+|users_id|integer|null: false,foreign_key: true|
 |groups_id|integer|null: false,foreign_key: true|
 
 ### Association
-- belongs_to :user
+- belongs_to :users
 - belongs_to :groups
 
 
@@ -38,8 +38,8 @@
 |------|----|-------|
 |content|string||
 |img|string||
-|user_id|integer|null: false,foreign_key: true|
+|users_id|integer|null: false,foreign_key: true|
 
 ### Association
-- belongs_to :user
+- belongs_to :users
 
