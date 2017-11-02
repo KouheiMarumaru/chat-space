@@ -1,3 +1,213 @@
-// Place all the styles related to the messages controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
+body {overflow-y:hidden;}
+
+.alert {
+  text-align: center;
+  background-color: #38AEF0;
+  color: #fff;
+}
+
+//左側
+.sideContents {
+  height: 100vh;
+  width: 300px;
+  float: left;
+}
+
+//左側 user
+.user {
+  background-color : #253141;
+  // width: 260px;
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-bottom: 35px;
+  padding-top: 35px;
+}
+
+.namebox {
+  float: left;
+}
+
+.linkbox {
+  float: right;
+}
+
+.userName {
+  color: #FFF;
+  font-weight: bold;
+  font-size: 16px;
+}
+
+//左側 group
+.group {
+  background-color: #2f3e51;
+  height: 100vh;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+.groupbox{
+  padding-top: 20px;
+}
+
+.groupTitle{
+  color: #fff;
+  font-size: 15px;
+}
+
+.groupTxt{
+  color: #fff;
+  font-size: 11px;
+  padding-top: 5px;
+  padding-bottom: 40px;
+}
+
+.fa-pencil-square-o {
+  color: #fff;
+}
+
+.fa-cog {
+  color: #fff;
+}
+
+
+//右側
+.mainContents {
+  float: left;
+  height: 100vh;
+  // width: 600px;
+  width: calc(100vw - 315px);
+}
+
+//右側 header
+.header{
+  padding-left: 40px;
+  padding-right: 40px;
+  border-bottom-color: #eee;
+  border-bottom: 1px;
+}
+
+.headerNamebox{
+  float: left;
+}
+
+.groupHeaderTitle {
+  padding-top: 35px;
+  padding-bottom: 15px;
+  font-size: 20px;
+  color:#333;
+}
+
+.memberHeaderName {
+  font-size: 12px;
+  color: #999;
+}
+
+.headerEdit {
+  float: right;
+  margin-top: 28px;
+  border: 1px solid #38AEF0;
+  color: #38AEF0;
+  padding-right: 20px;
+  padding-left: 20px;
+  line-height: 40px;
+  text-decoration: none;
+}
+
+.editTxt {
+  color: #38AEF0;
+  text-decoration: none;
+}
+
+
+//右側 main
+.main {
+  background-color: #AAA;
+  padding-left: 40px;
+  padding-right: 40px;
+  padding-top: 46px;
+  border-top-color: #eee;
+  border-top-style: solid;
+  height: calc(100vh - 100px - 135px);
+  overflow: scroll;
+}
+
+.memberMainName {
+  font-size: 16px;
+  font-weight: bold;
+  float: left;
+  margin-right: 10px;
+}
+
+.postTime {
+  font-size:12px;
+  color: #999;
+}
+
+.postTxt {
+  font-size: 14px;
+  color: #434A54;
+  margin-top: 10px;
+  margin-bottom: 40px;
+}
+
+
+//右側 footer
+.footer {
+  position:fixed;
+  bottom:0;
+  padding-left: 40px;
+  padding-right: 40px;
+  padding-bottom: 20px;
+  padding-top: 20px;
+  background-color: #DDD;
+  height: 50px;
+}
+
+.form-imgbox {
+  float: left;
+}
+
+.formbox {
+  float: left;
+}
+
+.inputbox {
+  height: 50px;
+  border: none;
+  width: calc(100vw - 555px);
+  padding-left: 10px;
+}
+
+.imgbox {
+  padding-left: 25px;
+  padding-right: 10px;
+  background-color: #fff;
+  margin-right: 15px;
+  line-height: 50px;
+  height: 50px;
+  float: right;
+}
+
+.hidden {
+  display: none;
+}
+
+.send {
+  float: right;
+}
+
+.sendbox{
+  background-color:#38AEF0;
+  color: #fff;
+  line-height: 50px;
+  padding-left: 20px;
+  padding-right: 20px;
+  float: right;
+  border: none;
+}
+
+.clearfix:after {
+  content: "";
+  clear: both;
+  display: block;
+}

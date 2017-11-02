@@ -1,1 +1,82 @@
-%p Hello World!
+.contents.clearfix
+  .alert チャットグループが作成されました。
+
+  /左側
+  .sideContents.clearfix
+    .user.clearfix
+      .namebox
+        %p.userName nameSample
+      .linkbox
+        %ul
+          %li.fa.fa-pencil-square-o
+            %a{href: '/#', title: 'title'}
+          %li.fa.fa-cog
+            %a{href: '/#', title: 'title'}
+
+    .group.clearfix
+      .groupbox
+        %a{href: '/#', title: 'title'}
+          %p.groupTitle sample
+          %p.groupTxt aaaaa
+      .groupbox
+        %a{href: '/#', title: 'title'}
+          %p.groupTitle sample
+          %p.groupTxt aaaaa
+      .groupbox
+        %a{href: '/#', title: 'title'}
+          %p.groupTitle sample
+          %p.groupTxt aaaaa
+
+  /右側
+  .mainContents
+    .header.clearfix
+      .headerNamebox
+        .groupHeaderTitle sampleグループ
+        .memberHeaderName MEMBER: TestTarou
+      .headerEdit
+        %a{class: 'editTxt', href: '/#', title: 'title'} Edit
+    .main
+      .mainTxtbox.clearfix
+        .memberMainName TestTarou
+        .postTime.clearfix 2017/11/1 12:00:00
+        .postTxt 投稿文
+      .mainTxtbox
+        .memberMainName TestTarou
+        .postTime.clearfix 2017/11/1 12:00:00
+        .postTxt 投稿文
+      .mainTxtbox
+        .memberMainName TestTarou
+        .postTime.clearfix  2017/11/1 12:00:00
+        .postTxt 投稿文
+      .mainTxtbox
+        .memberMainName TestTarou
+        .postTime.clearfix  2017/11/1 12:00:00
+        .postTxt 投稿文
+      .mainTxtbox
+        .memberMainName TestTarou
+        .postTime.clearfix  2017/11/1 12:00:00
+        .postTxt 投稿文
+      .mainTxtbox
+        .memberMainName TestTarou
+        .postTime.clearfix  2017/11/1 12:00:00
+        .postTxt 投稿文
+      .mainTxtbox
+        .memberMainName TestTarou
+        .postTime.clearfix  2017/11/1 12:00:00
+        .postTxt 投稿文
+      .mainTxtbox
+        .memberMainName TestTarou
+        .postTime.clearfix  2017/11/1 12:00:00
+        .postTxt 投稿文
+    .footer
+      .footerbox
+        .form-imgbox
+          .formbox
+            %form.messagebox
+              %input{class:'inputbox',type: 'text', placeholder: 'type a message'}
+          %label.imgbox
+            %i.fa.fa-picture-o
+            / %form{method: 'post',entype: 'multipart/form-data'}
+            %input{class:'hidden', type: 'file',}
+        .send
+          %input{class:'sendbox', type: 'submit', value: 'Send'}
