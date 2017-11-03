@@ -1,10 +1,13 @@
+$white-color: #fff;
+$lightblue-color: #38AEF0;
+
 body {
   overflow-y:hidden;
 }
 
 .alert {
-  background-color: #38AEF0;
-  color: #fff;
+  background-color: $lightblue-color;
+  color: $white-color;
   text-align: center;
 }
 
@@ -26,7 +29,7 @@ body {
     .user__name__box {
       float: left;
         .user__name {
-          color: #FFF;
+          color: $white-color;
           font-size: 16px;
           font-weight: bold;
       }
@@ -34,10 +37,10 @@ body {
     .link__box {
       float: right;
       .fa-pencil-square-o {
-        color: #fff;
+        color: $white-color;
       }
       .fa-cog {
-        color: #fff;
+        color: $white-color;
       }
     }
   }
@@ -49,11 +52,11 @@ body {
     .group__box{
       padding-top: 20px;
       .group__title{
-        color: #fff;
+        color: $white-color;
         font-size: 15px;
       }
       .group__txt{
-        color: #fff;
+        color: $white-color;
         font-size: 11px;
         padding: 5px 0px 40px;
       }
@@ -86,15 +89,15 @@ body {
     }
     //Editボタン
     .header__edit {
-      border: 1px solid #38AEF0;
-      color: #38AEF0;
+      border: 1px solid $lightblue-color;
+      color: $lightblue-color;
       float: right;
       margin-top: 28px;
       padding: 0px 20px;
       line-height: 40px;
       text-decoration: none;
         .edit__txt {
-          color: #38AEF0;
+          color: $lightblue-color;
           text-decoration: none;
         }
     }
@@ -142,7 +145,7 @@ body {
                 }
           }
           .img__box {
-            background-color: #fff;
+            background-color: $white-color;
             float: right;
             height: 50px;
             margin-right: 15px;
@@ -157,9 +160,9 @@ body {
         .send {
           float: right;
           .send__box{
-            background-color:#38AEF0;
+            background-color: $lightblue-color;
             border: none;
-            color: #fff;
+            color: $white-color;
             float: right;
             line-height: 50px;
             padding: 0px 20px;
