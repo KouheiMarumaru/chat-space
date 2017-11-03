@@ -5,170 +5,179 @@ body {
   overflow-y:hidden;
 }
 
-.alert {
-  background-color: $lightblue-color;
-  color: $white-color;
-  text-align: center;
-}
-
 .clearfix:after {
   content: "";
   clear: both;
   display: block;
 }
 
-//左側
-.side__contents {
-  float: left;
-  height: 100vh;
-  width: 300px;
-  //ユーザー名表示
-  .user {
-    background-color : #253141;
-    padding: 35px 20px 42px 20px;
-    .user__name__box {
-      float: left;
-        .user__name {
-          color: $white-color;
-          font-size: 16px;
-          font-weight: bold;
-      }
-    }
-    .link__box {
-      float: right;
-      .fa-pencil-square-o {
-        color: $white-color;
-      }
-      .fa-cog {
-        color: $white-color;
-      }
-    }
+.contents {
+
+  .alert {
+    background-color: $lightblue-color;
+    color: $white-color;
+    text-align: center;
   }
-  //チャットグループ表示
-  .group {
-    background-color: #2f3e51;
+
+  //左側
+  .side__contents {
+    float: left;
     height: 100vh;
-    padding: 0px 20px;
-    .group__box{
-      padding-top: 20px;
-      .group__title{
-        color: $white-color;
-        font-size: 15px;
+    width: 300px;
+    //ユーザー名表示
+    .user {
+      background-color : #253141;
+      padding: 35px 20px 42px 20px;
+      .user__name__box {
+        float: left;
+          .user__name {
+            color: $white-color;
+            font-size: 16px;
+            font-weight: bold;
+        }
       }
-      .group__txt{
-        color: $white-color;
-        font-size: 11px;
-        padding: 5px 0px 40px;
+      .link__box {
+        float: right;
+        .fa-pencil-square-o {
+          color: $white-color;
+        }
+        .fa-cog {
+          color: $white-color;
+        }
+      }
+    }
+    //チャットグループ表示
+    .group {
+      background-color: #2f3e51;
+      height: 100vh;
+      padding: 0px 20px;
+      .group__box{
+        padding-top: 20px;
+        .group__title{
+          color: $white-color;
+          font-size: 15px;
+        }
+        .group__txt{
+          color: $white-color;
+          font-size: 11px;
+          padding: 5px 0px 40px;
+        }
       }
     }
   }
-}
 
 
-//右側
-.main__contents {
-  float: left;
-  height: 100vh;
-  width: calc(100vw - 315px);
-  //グループ名表示箇所
-  .header{
-    border-bottom-color: #eee;
-    border-bottom: 1px;
-    padding: 0px 40px;
-    .header__name__box{
-      float: left;
-      .group__header__title {
-        font-size: 20px;
-        color:#333;
-        padding: 35px 0px 15px;
+  //右側
+  .main__contents {
+    float: left;
+    height: 100vh;
+    width: calc(100vw - 315px);
+    //グループ名表示箇所
+    .header{
+      border-bottom-color: #eee;
+      border-bottom: 1px;
+      padding: 0px 40px;
+      .header__name__box{
+        float: left;
+        .group__header__title {
+          font-size: 20px;
+          color:#333;
+          padding: 35px 0px 15px;
+        }
+        .member__header__name {
+          font-size: 12px;
+          color: #999;
+        }
       }
-      .member__header__name {
-        font-size: 12px;
+      //Editボタン
+      .header__edit {
+        border: 1px solid $lightblue-color;
+        color: $lightblue-color;
+        float: right;
+        margin-top: 28px;
+        padding: 0px 20px;
+        line-height: 40px;
+        text-decoration: none;
+          .edit__txt {
+            color: $lightblue-color;
+            text-decoration: none;
+          }
+      }
+    }
+    //チャット表示箇所
+    .main {
+      background-color: #AAA;
+      border-top-color: #eee;
+      border-top-style: solid;
+      height: calc(100vh - 100px - 135px);
+      overflow: scroll;
+      padding: 46px 40px;
+    }
+      .main__member__name {
+        font-size: 16px;
+        font-weight: bold;
+        float: left;
+        margin-right: 10px;
+      }
+      .post__time {
+        font-size:12px;
         color: #999;
       }
-    }
-    //Editボタン
-    .header__edit {
-      border: 1px solid $lightblue-color;
-      color: $lightblue-color;
-      float: right;
-      margin-top: 28px;
-      padding: 0px 20px;
-      line-height: 40px;
-      text-decoration: none;
-        .edit__txt {
-          color: $lightblue-color;
-          text-decoration: none;
-        }
-    }
-  }
-  //チャット表示箇所
-  .main {
-    background-color: #AAA;
-    border-top-color: #eee;
-    border-top-style: solid;
-    height: calc(100vh - 100px - 135px);
-    overflow: scroll;
-    padding: 46px 40px;
-  }
-    .main__member__name {
-      font-size: 16px;
-      font-weight: bold;
-      float: left;
-      margin-right: 10px;
-    }
-    .post__time {
-      font-size:12px;
-      color: #999;
-    }
-    .post__txt {
-      color: #434A54;
-      font-size: 14px;
-      margin: 10px 0px 40px;
-    }
-  //入力箇所
-  .footer {
-    bottom:0;
-    background-color: #DDD;
-    height: 50px;
-    padding: 20px 40px;
-    position:fixed;
-        .form__img__box {
-          float: left;
-          .form__box {
+      .post__txt {
+        color: #434A54;
+        font-size: 14px;
+        margin: 10px 0px 40px;
+      }
+    //入力箇所
+    .footer {
+      bottom:0;
+      background-color: #DDD;
+      height: 50px;
+      padding: 20px 40px;
+      position:fixed;
+          .form__img__box {
             float: left;
-                .input__box {
-                  height: 50px;
-                  border: none;
-                  width: calc(100vw - 555px);
-                  padding-left: 10px;
-                }
-          }
-          .img__box {
-            background-color: $white-color;
-            float: right;
-            height: 50px;
-            margin-right: 15px;
-            line-height: 50px;
-            padding-left: 25px;
-            padding-right: 10px;
-            .hidden {
-              display: none;
+            .form__box {
+              float: left;
+                  .input__box {
+                    height: 50px;
+                    border: none;
+                    width: calc(100vw - 555px);
+                    padding-left: 10px;
+                  }
+            }
+            .img__box {
+              background-color: $white-color;
+              float: right;
+              height: 50px;
+              margin-right: 15px;
+              line-height: 50px;
+              padding-left: 25px;
+              padding-right: 10px;
+              .hidden {
+                display: none;
+              }
             }
           }
-        }
-        .send {
-          float: right;
-          .send__box{
-            background-color: $lightblue-color;
-            border: none;
-            color: $white-color;
+          .send {
             float: right;
-            line-height: 50px;
-            padding: 0px 20px;
+            .send__box{
+              background-color: $lightblue-color;
+              border: none;
+              color: $white-color;
+              float: right;
+              line-height: 50px;
+              padding: 0px 20px;
+            }
           }
-        }
+    }
   }
+
+
+
 }
+
+
+
 
 
