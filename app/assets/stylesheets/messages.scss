@@ -1,0 +1,175 @@
+body {
+  overflow-y:hidden;
+}
+
+.contents {
+  @include clearfix();
+  .alert {
+    background-color: $lightblue-color;
+    color: $white-color;
+    text-align: center;
+  }
+
+  //左側
+  .left {
+    @include clearfix();
+    float: left;
+    height: 100vh;
+    width: 300px;
+    //ユーザー名表示
+    .user {
+      @include clearfix();
+      background-color : #253141;
+      padding: 35px 20px 42px 20px;
+      &__name {
+        float: left;
+          &__item {
+            color: $white-color;
+            font-size: 16px;
+            font-weight: bold;
+        }
+      }
+      &__link {
+        float: right;
+        .fa-pencil-square-o {
+          color: $white-color;
+        }
+        .fa-cog {
+          color: $white-color;
+        }
+      }
+    }
+    //チャットグループ表示
+    .group {
+      @include clearfix();
+      background-color: #2f3e51;
+      height: 100vh;
+      padding: 0px 20px;
+      &__block {
+        padding-top: 20px;
+        &__title {
+          color: $white-color;
+          font-size: 15px;
+        }
+        &__text {
+          color: $white-color;
+          font-size: 11px;
+          padding: 5px 0px 40px;
+        }
+      }
+    }
+  }
+
+
+  //右側
+  .right {
+    float: left;
+    height: 100vh;
+    width: calc(100vw - 315px);
+    //グループ名表示箇所
+    .header {
+      @include clearfix();
+      border-bottom-color: #eee;
+      border-bottom: 1px;
+      padding: 0px 40px;
+      &__block {
+        float: left;
+        &__title {
+          font-size: 20px;
+          color:#333;
+          padding: 35px 0px 15px;
+        }
+        &__member {
+          font-size: 12px;
+          color: #999;
+        }
+      }
+      //Editボタン
+      &__edit {
+        border: 1px solid $lightblue-color;
+        color: $lightblue-color;
+        float: right;
+        margin-top: 28px;
+        padding: 0px 20px;
+        line-height: 40px;
+        text-decoration: none;
+          &__text {
+            color: $lightblue-color;
+            text-decoration: none;
+          }
+      }
+    }
+    //チャット表示箇所
+    .main {
+      background-color: #AAA;
+      border-top-color: #eee;
+      border-top-style: solid;
+      height: calc(100vh - 100px - 135px);
+      overflow: scroll;
+      padding: 46px 40px;
+      &__post {
+        &__name {
+          font-size: 16px;
+          font-weight: bold;
+          float: left;
+          margin-right: 10px;
+        }
+        &__time {
+          @include clearfix();
+          font-size:12px;
+          color: #999;
+        }
+        &__text {
+          color: #434A54;
+          font-size: 14px;
+          margin: 10px 0px 40px;
+        }
+      }
+    }
+    //入力箇所
+    .footer {
+      bottom:0;
+      background-color: #DDD;
+      height: 50px;
+      padding: 20px 40px;
+      position:fixed;
+      &__inner {
+        &__form {
+          float: left;
+          &__block {
+            float: left;
+                &__btn {
+                  height: 50px;
+                  border: none;
+                  width: calc(100vw - 555px);
+                  padding-left: 10px;
+                }
+          }
+          &__icon {
+            background-color: $white-color;
+            float: right;
+            height: 50px;
+            margin-right: 15px;
+            line-height: 50px;
+            padding-left: 25px;
+            padding-right: 10px;
+            .hidden {
+              display: none;
+            }
+          }
+        }
+        &__send {
+          float: right;
+          &__btn {
+            background-color: $lightblue-color;
+            border: none;
+            color: $white-color;
+            float: right;
+            line-height: 50px;
+            padding: 0px 20px;
+          }
+        }
+      }
+    }
+  }
+}

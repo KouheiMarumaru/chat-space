@@ -1,0 +1,87 @@
+.contents
+  .alert チャットグループが作成されました。
+
+  /左側
+  .left
+    /ユーザー名表示
+    .user
+      .user__name
+        %p.user__name__item nameSample
+      .user__link
+        %ul
+          /新規チャットグループ作成
+          %li.fa.fa-pencil-square-o
+            %a{href: '/#', title: 'title'}
+          /アカウント編集
+          %li.fa.fa-cog
+            %a{href: '/#', title: 'title'}
+    /グループ表示
+    .group
+      .group__block
+        %a{href: '/#', title: 'title'}
+          %p.group__block__title sample
+          %p.group__block__text aaaaa
+      .group__block
+        %a{href: '/#', title: 'title'}
+          %p.group__block__title sample
+          %p.group__block__text aaaaa
+      .group__block
+        %a{href: '/#', title: 'title'}
+          %p.group__block__title sample
+          %p.group__block__text aaaaa
+
+  /右側
+  .right
+    /グループ名表示箇所
+    .header
+      .header__block
+        .header__block__title sampleグループ
+        .header__block__member MEMBER: TestTarou
+      .header__edit
+        %a{class: 'header__edit__text', href: '/#', title: 'title'} Edit
+    /チャット表示箇所
+    .main
+      .main__post
+        .main__post__name TestTarou
+        .main__post__time 2017/11/1 12:00:00
+        .main__post__text 投稿文
+      .main__post
+        .main__post__name TestTarou
+        .main__post__time 2017/11/1 12:00:00
+        .main__post__text 投稿文
+      .main__post
+        .main__post__name TestTarou
+        .main__post__time  2017/11/1 12:00:00
+        .main__post__text 投稿文
+      .main__post
+        .main__post__name TestTarou
+        .main__post__time  2017/11/1 12:00:00
+        .main__post__text 投稿文
+      .main__post
+        .main__post__name TestTarou
+        .main__post__time  2017/11/1 12:00:00
+        .main__post__text 投稿文
+      .main__post
+        .main__post__name TestTarou
+        .main__post__time  2017/11/1 12:00:00
+        .main__post__text 投稿文
+      .main__post
+        .main__post__name TestTarou
+        .main__post__time  2017/11/1 12:00:00
+        .main__post__text 投稿文
+      .main__post
+        .main__post__name TestTarou
+        .main__post__time  2017/11/1 12:00:00
+        .main__post__text 投稿文
+    /入力箇所
+    .footer
+      .footer__inner
+        .footer__inner__form
+          .footer__inner__form__block
+            %form
+              %input{class:'footer__inner__form__block__btn',type: 'text', placeholder: 'type a message'}
+          %label.footer__inner__form__icon
+            %i.fa.fa-picture-o
+            %input{class:'hidden', type: 'file',}
+        .footer__inner__send
+          %input{class:'footer__inner__send__btn', type: 'submit', value: 'Send'}
