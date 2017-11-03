@@ -2,83 +2,87 @@
   .alert チャットグループが作成されました。
 
   /左側
-  .sideContents.clearfix
+  .side__contents.clearfix
+    /ユーザー名表示
     .user.clearfix
-      .namebox
-        %p.userName nameSample
-      .linkbox
+      .user__name__box
+        %p.user__name nameSample
+      .link__box
         %ul
-          //新規チャットグループ作成
+          /新規チャットグループ作成
           %li.fa.fa-pencil-square-o
             %a{href: '/#', title: 'title'}
-          //アカウント編集
+          /アカウント編集
           %li.fa.fa-cog
             %a{href: '/#', title: 'title'}
-
+    /グループ表示
     .group.clearfix
-      .groupbox
+      .group__box
         %a{href: '/#', title: 'title'}
-          %p.groupTitle sample
-          %p.groupTxt aaaaa
-      .groupbox
+          %p.group__title sample
+          %p.group__txt aaaaa
+      .group__box
         %a{href: '/#', title: 'title'}
-          %p.groupTitle sample
-          %p.groupTxt aaaaa
-      .groupbox
+          %p.group__title sample
+          %p.group__txt aaaaa
+      .group__box
         %a{href: '/#', title: 'title'}
-          %p.groupTitle sample
-          %p.groupTxt aaaaa
+          %p.group__title sample
+          %p.group__txt aaaaa
 
   /右側
-  .mainContents
+  .main__contents
+    /グループ名表示箇所
     .header.clearfix
-      .headerNamebox
-        .groupHeaderTitle sampleグループ
-        .memberHeaderName MEMBER: TestTarou
-      .headerEdit
-        %a{class: 'editTxt', href: '/#', title: 'title'} Edit
+      .header__name__box
+        .group__header__title sampleグループ
+        .member__header__name MEMBER: TestTarou
+      .header__edit
+        %a{class: 'edit__txt', href: '/#', title: 'title'} Edit
+    /チャット表示箇所
     .main
-      .mainTxtbox.clearfix
-        .memberMainName TestTarou
-        .postTime.clearfix 2017/11/1 12:00:00
-        .postTxt 投稿文
-      .mainTxtbox
-        .memberMainName TestTarou
-        .postTime.clearfix 2017/11/1 12:00:00
-        .postTxt 投稿文
-      .mainTxtbox
-        .memberMainName TestTarou
-        .postTime.clearfix  2017/11/1 12:00:00
-        .postTxt 投稿文
-      .mainTxtbox
-        .memberMainName TestTarou
-        .postTime.clearfix  2017/11/1 12:00:00
-        .postTxt 投稿文
-      .mainTxtbox
-        .memberMainName TestTarou
-        .postTime.clearfix  2017/11/1 12:00:00
-        .postTxt 投稿文
-      .mainTxtbox
-        .memberMainName TestTarou
-        .postTime.clearfix  2017/11/1 12:00:00
-        .postTxt 投稿文
-      .mainTxtbox
-        .memberMainName TestTarou
-        .postTime.clearfix  2017/11/1 12:00:00
-        .postTxt 投稿文
-      .mainTxtbox
-        .memberMainName TestTarou
-        .postTime.clearfix  2017/11/1 12:00:00
-        .postTxt 投稿文
+      .main__txt__box.clearfix
+        .main__member__name TestTarou
+        .post__time.clearfix 2017/11/1 12:00:00
+        .post__txt 投稿文
+      .main__txt__box
+        .main__member__name TestTarou
+        .post__time.clearfix 2017/11/1 12:00:00
+        .post__txt 投稿文
+      .main__txt__box
+        .main__member__name TestTarou
+        .post__time.clearfix  2017/11/1 12:00:00
+        .post__txt 投稿文
+      .main__txt__box
+        .main__member__name TestTarou
+        .post__time.clearfix  2017/11/1 12:00:00
+        .post__txt 投稿文
+      .main__txt__box
+        .main__member__name TestTarou
+        .post__time.clearfix  2017/11/1 12:00:00
+        .post__txt 投稿文
+      .main__txt__box
+        .main__member__name TestTarou
+        .post__time.clearfix  2017/11/1 12:00:00
+        .post__txt 投稿文
+      .main__txt__box
+        .main__member__name TestTarou
+        .post__time.clearfix  2017/11/1 12:00:00
+        .post__txt 投稿文
+      .main__txt__box
+        .main__member__name TestTarou
+        .post__time.clearfix  2017/11/1 12:00:00
+        .post__txt 投稿文
+    /入力箇所
     .footer
-      .footerbox
-        .form-imgbox
-          .formbox
-            %form.messagebox
-              %input{class:'inputbox',type: 'text', placeholder: 'type a message'}
-          %label.imgbox
+      .footer__box
+        .form__img__box
+          .form__box
+            %form.message__box
+              %input{class:'input__box',type: 'text', placeholder: 'type a message'}
+          %label.img__box
             %i.fa.fa-picture-o
             / %form{method: 'post',entype: 'multipart/form-data'}
             %input{class:'hidden', type: 'file',}
         .send
-          %input{class:'sendbox', type: 'submit', value: 'Send'}
+          %input{class:'send__box', type: 'submit', value: 'Send'}

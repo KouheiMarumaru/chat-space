@@ -15,23 +15,23 @@ body {
 }
 
 //左側
-.sideContents {
+.side__contents {
   float: left;
   height: 100vh;
   width: 300px;
   //ユーザー名表示
   .user {
     background-color : #253141;
-    padding: 35px 20px 35px 20px;
-    .namebox {
+    padding: 35px 20px 42px 20px;
+    .user__name__box {
       float: left;
-        .userName {
+        .user__name {
           color: #FFF;
           font-size: 16px;
           font-weight: bold;
       }
     }
-    .linkbox {
+    .link__box {
       float: right;
       .fa-pencil-square-o {
         color: #fff;
@@ -46,13 +46,13 @@ body {
     background-color: #2f3e51;
     height: 100vh;
     padding: 0px 20px;
-    .groupbox{
+    .group__box{
       padding-top: 20px;
-      .groupTitle{
+      .group__title{
         color: #fff;
         font-size: 15px;
       }
-      .groupTxt{
+      .group__txt{
         color: #fff;
         font-size: 11px;
         padding: 5px 0px 40px;
@@ -63,7 +63,7 @@ body {
 
 
 //右側
-.mainContents {
+.main__contents {
   float: left;
   height: 100vh;
   width: calc(100vw - 315px);
@@ -72,20 +72,20 @@ body {
     border-bottom-color: #eee;
     border-bottom: 1px;
     padding: 0px 40px;
-    .headerNamebox{
+    .header__name__box{
       float: left;
-      .groupHeaderTitle {
+      .group__header__title {
         font-size: 20px;
         color:#333;
         padding: 35px 0px 15px;
       }
-      .memberHeaderName {
+      .member__header__name {
         font-size: 12px;
         color: #999;
       }
     }
     //Editボタン
-    .headerEdit {
+    .header__edit {
       border: 1px solid #38AEF0;
       color: #38AEF0;
       float: right;
@@ -93,7 +93,7 @@ body {
       padding: 0px 20px;
       line-height: 40px;
       text-decoration: none;
-        .editTxt {
+        .edit__txt {
           color: #38AEF0;
           text-decoration: none;
         }
@@ -108,17 +108,17 @@ body {
     overflow: scroll;
     padding: 46px 40px;
   }
-    .memberMainName {
+    .main__member__name {
       font-size: 16px;
       font-weight: bold;
       float: left;
       margin-right: 10px;
     }
-    .postTime {
+    .post__time {
       font-size:12px;
       color: #999;
     }
-    .postTxt {
+    .post__txt {
       color: #434A54;
       font-size: 14px;
       margin: 10px 0px 40px;
@@ -130,18 +130,18 @@ body {
     height: 50px;
     padding: 20px 40px;
     position:fixed;
-        .form-imgbox {
+        .form__img__box {
           float: left;
-          .formbox {
+          .form__box {
             float: left;
-                .inputbox {
+                .input__box {
                   height: 50px;
                   border: none;
                   width: calc(100vw - 555px);
                   padding-left: 10px;
                 }
           }
-          .imgbox {
+          .img__box {
             background-color: #fff;
             float: right;
             height: 50px;
@@ -156,7 +156,7 @@ body {
         }
         .send {
           float: right;
-          .sendbox{
+          .send__box{
             background-color:#38AEF0;
             border: none;
             color: #fff;
