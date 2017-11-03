@@ -5,14 +5,8 @@ body {
   overflow-y:hidden;
 }
 
-.clearfix:after {
-  content: "";
-  clear: both;
-  display: block;
-}
-
 .contents {
-
+  @include clearfix();
   .alert {
     background-color: $lightblue-color;
     color: $white-color;
@@ -21,14 +15,16 @@ body {
 
   //左側
   .side__contents {
+    @include clearfix();
     float: left;
     height: 100vh;
     width: 300px;
     //ユーザー名表示
     .user {
+      @include clearfix();
       background-color : #253141;
       padding: 35px 20px 42px 20px;
-      .user__name__box {
+      &__name__box {
         float: left;
           .user__name {
             color: $white-color;
@@ -48,10 +44,11 @@ body {
     }
     //チャットグループ表示
     .group {
+      @include clearfix();
       background-color: #2f3e51;
       height: 100vh;
       padding: 0px 20px;
-      .group__box{
+      &__box{
         padding-top: 20px;
         .group__title{
           color: $white-color;
@@ -74,10 +71,11 @@ body {
     width: calc(100vw - 315px);
     //グループ名表示箇所
     .header{
+      @include clearfix();
       border-bottom-color: #eee;
       border-bottom: 1px;
       padding: 0px 40px;
-      .header__name__box{
+      &__name__box{
         float: left;
         .group__header__title {
           font-size: 20px;
@@ -112,7 +110,6 @@ body {
       height: calc(100vh - 100px - 135px);
       overflow: scroll;
       padding: 46px 40px;
-    }
       .main__member__name {
         font-size: 16px;
         font-weight: bold;
@@ -120,6 +117,7 @@ body {
         margin-right: 10px;
       }
       .post__time {
+        @include clearfix();
         font-size:12px;
         color: #999;
       }
@@ -128,6 +126,7 @@ body {
         font-size: 14px;
         margin: 10px 0px 40px;
       }
+    }
     //入力箇所
     .footer {
       bottom:0;
@@ -161,7 +160,7 @@ body {
           }
           .send {
             float: right;
-            .send__box{
+            &__box{
               background-color: $lightblue-color;
               border: none;
               color: $white-color;
@@ -172,12 +171,4 @@ body {
           }
     }
   }
-
-
-
 }
-
-
-
-
-
