@@ -2,12 +2,12 @@
   .alert チャットグループが作成されました。
 
   /左側
-  .side__contents
+  .left
     /ユーザー名表示
     .user
-      .user__name__box
-        %p.user__name nameSample
-      .link__box
+      .user__name
+        %p.user__name__item nameSample
+      .user__link
         %ul
           /新規チャットグループ作成
           %li.fa.fa-pencil-square-o
@@ -17,71 +17,71 @@
             %a{href: '/#', title: 'title'}
     /グループ表示
     .group
-      .group__box
+      .group__block
         %a{href: '/#', title: 'title'}
-          %p.group__title sample
-          %p.group__txt aaaaa
-      .group__box
+          %p.group__block__title sample
+          %p.group__block__text aaaaa
+      .group__block
         %a{href: '/#', title: 'title'}
-          %p.group__title sample
-          %p.group__txt aaaaa
-      .group__box
+          %p.group__block__title sample
+          %p.group__block__text aaaaa
+      .group__block
         %a{href: '/#', title: 'title'}
-          %p.group__title sample
-          %p.group__txt aaaaa
+          %p.group__block__title sample
+          %p.group__block__text aaaaa
 
   /右側
-  .main__contents
+  .right
     /グループ名表示箇所
     .header
-      .header__name__box
-        .group__header__title sampleグループ
-        .member__header__name MEMBER: TestTarou
+      .header__block
+        .header__block__title sampleグループ
+        .header__block__member MEMBER: TestTarou
       .header__edit
-        %a{class: 'edit__txt', href: '/#', title: 'title'} Edit
+        %a{class: 'header__edit__text', href: '/#', title: 'title'} Edit
     /チャット表示箇所
     .main
-      .main__txt__box
-        .main__member__name TestTarou
-        .post__time 2017/11/1 12:00:00
-        .post__txt 投稿文
-      .main__txt__box
-        .main__member__name TestTarou
-        .post__time 2017/11/1 12:00:00
-        .post__txt 投稿文
-      .main__txt__box
-        .main__member__name TestTarou
-        .post__time  2017/11/1 12:00:00
-        .post__txt 投稿文
-      .main__txt__box
-        .main__member__name TestTarou
-        .post__time  2017/11/1 12:00:00
-        .post__txt 投稿文
-      .main__txt__box
-        .main__member__name TestTarou
-        .post__time  2017/11/1 12:00:00
-        .post__txt 投稿文
-      .main__txt__box
-        .main__member__name TestTarou
-        .post__time  2017/11/1 12:00:00
-        .post__txt 投稿文
-      .main__txt__box
-        .main__member__name TestTarou
-        .post__time  2017/11/1 12:00:00
-        .post__txt 投稿文
-      .main__txt__box
-        .main__member__name TestTarou
-        .post__time  2017/11/1 12:00:00
-        .post__txt 投稿文
+      .main__post
+        .main__post__name TestTarou
+        .main__post__time 2017/11/1 12:00:00
+        .main__post__text 投稿文
+      .main__post
+        .main__post__name TestTarou
+        .main__post__time 2017/11/1 12:00:00
+        .main__post__text 投稿文
+      .main__post
+        .main__post__name TestTarou
+        .main__post__time  2017/11/1 12:00:00
+        .main__post__text 投稿文
+      .main__post
+        .main__post__name TestTarou
+        .main__post__time  2017/11/1 12:00:00
+        .main__post__text 投稿文
+      .main__post
+        .main__post__name TestTarou
+        .main__post__time  2017/11/1 12:00:00
+        .main__post__text 投稿文
+      .main__post
+        .main__post__name TestTarou
+        .main__post__time  2017/11/1 12:00:00
+        .main__post__text 投稿文
+      .main__post
+        .main__post__name TestTarou
+        .main__post__time  2017/11/1 12:00:00
+        .main__post__text 投稿文
+      .main__post
+        .main__post__name TestTarou
+        .main__post__time  2017/11/1 12:00:00
+        .main__post__text 投稿文
     /入力箇所
     .footer
-      .footer__box
-        .form__img__box
-          .form__box
-            %form.message__box
-              %input{class:'input__box',type: 'text', placeholder: 'type a message'}
-          %label.img__box
+      .footer__inner
+        .footer__inner__form
+          .footer__inner__form__block
+            %form
+              %input{class:'footer__inner__form__block__btn',type: 'text', placeholder: 'type a message'}
+          %label.footer__inner__form__icon
             %i.fa.fa-picture-o
             %input{class:'hidden', type: 'file',}
-        .send
-          %input{class:'send__box', type: 'submit', value: 'Send'}
+        .footer__inner__send
+          %input{class:'footer__inner__send__btn', type: 'submit', value: 'Send'}
