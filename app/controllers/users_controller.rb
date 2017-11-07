@@ -6,12 +6,11 @@ class UsersController < ApplicationController
 
   def update
     @user = User.find(params[:id])
-    respond_to do |format|
-      if @user.update(users_params)
-        format.html { redirect_to root_path }
-      else
-        format.html { redirect_to edit_user_path }
-      end
+    if @user.update(users_params)
+      redirect_to root_path, notice: "ユーザー情報を編集しました。"
+    else
+      flash.now[:alert] = "ユーザー情報を編集できませんでした。"
+      render :edit
     end
   end
 
