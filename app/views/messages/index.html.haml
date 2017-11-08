@@ -9,7 +9,7 @@
       .user__link
         %ul
           /新規チャットグループ作成
-          =link_to root_path do
+          =link_to new_group_path do
             %li.fa.fa-pencil-square-o
 
           /アカウント編集
@@ -39,7 +39,7 @@
         .header__block__title sampleグループ
         .header__block__member MEMBER: TestTarou
       .header__edit
-        %a{class: 'header__edit__text', href: '/#', title: 'title'} Edit
+        =link_to "Edit", root_path, class: "header__edit__text"
     /チャット表示箇所
     .main
       .main__post
