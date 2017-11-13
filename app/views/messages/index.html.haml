@@ -5,7 +5,8 @@
     /ユーザー名表示
     .user
       .user__name
-        %p.user__name__item nameSample
+        %p.user__name__item
+          = current_user.name
       .user__link
         %ul
           /新規チャットグループ作成
@@ -18,18 +19,7 @@
 
     /グループ表示
     .group
-      .group__block
-        =link_to root_path do
-          %p.group__block__title sample
-          %p.group__block__text aaaaa
-      .group__block
-        =link_to root_path do
-          %p.group__block__title sample
-          %p.group__block__text aaaaa
-      .group__block
-        =link_to root_path do
-          %p.group__block__title sample
-          %p.group__block__text aaaaa
+      = render partial: "messages/group", locals:{groups: @groups}
 
   /右側
   .right

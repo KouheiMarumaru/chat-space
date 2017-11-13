@@ -1,0 +1,7 @@
+.group__block
+  - current_user.groups.each do |group|
+    =link_to root_path do
+      %p.group__block__title
+        = group.name
+      %p.group__block__text
+        test
