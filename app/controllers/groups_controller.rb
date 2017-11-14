@@ -1,10 +1,6 @@
 class GroupsController < ApplicationController
   before_action :set_group, only: [:edit]
 
-  def index
-  end
-
-
   def new
     @group = Group.new
   end
@@ -17,12 +13,6 @@ class GroupsController < ApplicationController
       render :new
       #直接viewファイルへ飛ぶ
     end
-  end
-
-  def edit
-  end
-
-  def update
   end
 
   private
