@@ -1,5 +1,11 @@
 class GroupsController < ApplicationController
-  before_action :set_group, only: [:edit]
+  before_action :set_group, only: [:edit ,:update]
+
+  def index
+  end
+
+  def edit
+  end
 
   def new
     @group = Group.new
@@ -14,6 +20,12 @@ class GroupsController < ApplicationController
       #直接viewファイルへ飛ぶ
     end
   end
+
+  def update
+    @group.update(group_params)
+    redirect_to root_path, notice: "グループを編集できました。"
+  end
+
 
   private
 
