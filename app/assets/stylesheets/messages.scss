@@ -153,9 +153,6 @@ body {
             line-height: 50px;
             padding-left: 25px;
             padding-right: 10px;
-            .hidden {
-              display: none;
-            }
           }
         }
         &__send {
@@ -172,4 +169,8 @@ body {
       }
     }
   }
+}
+
+.hidden {
+  display: none;
 }
