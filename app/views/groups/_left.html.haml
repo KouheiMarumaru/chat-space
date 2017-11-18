@@ -1,0 +1,16 @@
+/ユーザー名表示
+.user
+  .user__name
+    %p.user__name__item
+      = current_user.name
+  .user__link
+    %ul
+      /新規チャットグループ作成
+      =link_to new_group_path do
+        %li.fa.fa-pencil-square-o
+      /アカウント編集
+      =link_to edit_user_path(current_user) do
+        %li.fa.fa-cog
+/グループ表示
+.group
+  = render partial: "groups/group", locals:{groups: @groups}
