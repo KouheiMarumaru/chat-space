@@ -6,10 +6,6 @@ class MessagesController < ApplicationController
     @messages = @group.messages
   end
 
-  def show
-    @message = Message.find(params[:id])
-  end
-
   def create
     @message = Message.new(message_params)
     if @message.save
