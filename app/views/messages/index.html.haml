@@ -28,10 +28,9 @@
         .footer__inner
           .footer__inner__form
             .footer__inner__form__block
-              = form_for [@group,@message] do |f|
-                = f.text_area :content, placeholder: "type a message", class:'footer__inner__form__block__btn'
-                = f.label :img, class:'footer__inner__form__icon' do
-                  %i.fa.fa-picture-o
-                    = f.file_field :img, class:"hidden"
+              = f.text_area :content, placeholder: "type a message", class:'footer__inner__form__block__btn'
+              = f.label :img, class:'footer__inner__form__icon' do
+                %i.fa.fa-picture-o
+                  = f.file_field :img, class:"hidden"
           .footer__inner__send
             = f.submit value: "Send", class:'footer__inner__send__btn'
