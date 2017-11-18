@@ -1,0 +1,36 @@
+.contents
+  /左側
+  .left
+    = render partial: "groups/left", locals:{groups: @groups}
+  /右側
+  .right
+    /グループ名表示箇所
+    .header
+      .header__block
+        .header__block__title
+          = @group.name
+        .header__block__member MEMBER: TestTarou
+      .header__edit
+        =link_to "Edit", root_path, class: "header__edit__text"
+    /チャット表示箇所
+    .main
+      - @messages.each do |message|
+        .main__post
+          .main__post__name
+            = current_user.name
+          .main__post__time
+            = message.created_at
+          .main__post__text
+            = message.content
+    /入力箇所
+    .footer
+      = form_for [@group,@message] do |f|
+        .footer__inner
+          .footer__inner__form
+            .footer__inner__form__block
+              = f.text_area :content, placeholder: "type a message", class:'footer__inner__form__block__btn'
+              = f.label :img, class:'footer__inner__form__icon' do
+                %i.fa.fa-picture-o
+                  = f.file_field :img, class:"hidden"
+          .footer__inner__send
+            = f.submit value: "Send", class:'footer__inner__send__btn'
