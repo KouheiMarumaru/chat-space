@@ -1,5 +1,4 @@
 class MessagesController < ApplicationController
-  before_action :message_params, only: [:edit ,:update, :create, :show]
 
   def index
     @group = Group.find(params[:group_id])
@@ -14,13 +13,10 @@ class MessagesController < ApplicationController
   def create
     @message = Message.new(message_params)
     if @message.save
-      flash[:notice] = "コメントを作成出来ました。"
+      redirect_to group_messages_path, notice: "コメントを作成出来ました。"
     else
-      flash[:notice] = "コメントを作成出来ませんでした。"
+      redirect_to group_messages_path, alert: "コメントを作成出来ません"
     end
-  end
-
-  def update
   end
 
   private
