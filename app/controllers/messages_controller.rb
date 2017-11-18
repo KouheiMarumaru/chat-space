@@ -11,12 +11,13 @@ class MessagesController < ApplicationController
     @message = Message.find(params[:id])
   end
 
-  def new
-    @message = Message.find(params[:id])
-  end
-
   def create
-    Message.create(message_params)
+    @message = Message.new(message_params)
+    if @message.save
+      flash[:notice] = "コメントを作成出来ました。"
+    else
+      flash[:notice] = "コメントを作成出来ませんでした。"
+    end
   end
 
   def update
