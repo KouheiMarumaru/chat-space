@@ -4,4 +4,7 @@
       %p.group__block__title
         = group.name
       %p.group__block__text
-        test
+        - if group.messages.last
+          = group.messages.last.content
+        - else
+          まだメッセージがありません。
