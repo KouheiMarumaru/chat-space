@@ -2,7 +2,8 @@ FactoryGirl.define do
 
   factory :message do
     content       Faker::Lorem.paragraph
-    img           "test.jpg"
+    # img           Rack::Test::UploadedFile.new(File.join(Rails.root, 'spec/img/ltgm.jpg'))
+    img   Rack::Test::UploadedFile.new(File.join(Rails.root, 'spec/img/lgtm.jpg'))
     user
     group
   end
