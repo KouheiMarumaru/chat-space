@@ -36,8 +36,8 @@ $(function(){
     //jbuilderから送られたデータを受け止める
     .done(function(data){
       var html = buildHTML(data);
-      $('.main').append(html)
-      $('.textbox').val('')
+      $('.main').append(html);
+      $('.textbox').val('');
     })
 
     .fail(function(){
