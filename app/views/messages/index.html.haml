@@ -24,11 +24,11 @@
             = message.content
     /入力箇所
     .footer
-      = form_for [@group,@message] do |f|
+      = form_for [@group,@message],html: {id: 'new_comment'} do |f|
         .footer__inner
           .footer__inner__form
             .footer__inner__form__block
-              = f.text_area :content, placeholder: "type a message", class:'footer__inner__form__block__btn'
+              = f.text_area :content, placeholder: "type a message", class:'footer__inner__form__block__btn textbox"'
               = f.label :img, class:'footer__inner__form__icon' do
                 %i.fa.fa-picture-o
                   = f.file_field :img, class:"hidden"
