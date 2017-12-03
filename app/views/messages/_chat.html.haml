@@ -1,0 +1,10 @@
+.chat{ "data-message-id": "#{messages.id}"}
+  .main__post__name
+    = current_user.name
+  .main__post__time
+    = messages.created_at
+  .main__post__text
+    = messages.content
+  %p.chat__image
+    - if messages.img.present?
+      = image_tag(messages.img)
