@@ -15,16 +15,17 @@
     /チャット表示箇所
     .main
       - @messages.each do |message|
-        .main__post
+        .main__post{'data-id': message.id}
           .main__post__name
             = current_user.name
           .main__post__time
-            = message.created_at
+            = message.message_format
           .main__post__text
             = message.content
+
     /入力箇所
     .footer
-      = form_for [@group,@message],html: {id: 'new_comment'} do |f|
+      = form_for [@group,@message] do |f|
         .footer__inner
           .footer__inner__form
             .footer__inner__form__block
