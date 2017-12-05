@@ -16,46 +16,27 @@
     return html
   }
 
-
 var interval = setInterval(function() {
-
   if (window.location.href.match(/\/groups\/\d+\/messages/)) {
-
-  var id = $('.main__post').last().data('id');
-
-  $.ajax({
-    type: 'GET',
-    url: location.href,
-    dataType: 'json',
-    data: id,
-  })
-
-  .done(function(json) {
-
-    var insertHTML = '';
-
-    json.messages.forEach(function(message) {
-
-      if (message.id > id ) {
-
-        insertHTML += buildHTML(message);
-
-      }
-
+    var id = $('.main__post').last().data('id');
+    $.ajax({
+      type: 'GET',
+      url: location.href,
+      dataType: 'json',
+      data: id,
+    })
+    .done(function(json) {
+      var insertHTML = '';
+      json.messages.forEach(function(message) {
+        if (message.id > id ) {
+          insertHTML += buildHTML(message);
+        }
+      });
+      $('.main').append(insertHTML);
+    })
+    .fail(function(json) {
+      alert('自動更新に失敗しました');
     });
-
-    $('.main').append(insertHTML);
-
-
-  })
-
-  .fail(function(json) {
-
-    alert('自動更新に失敗しました');
-
-  });
-  } else {
-
-  clearInterval(interval);
-
-  }} , 10 * 1000 );
+    } else {
+      clearInterval(interval);
+    }} , 10 * 1000 );
