@@ -21,15 +21,16 @@ var interval = setInterval(function() {
 
   if (window.location.href.match(/\/groups\/\d+\/messages/)) {
 
+  var id = $('.main__post').last().data('id');
+
   $.ajax({
     type: 'GET',
     url: location.href,
-    dataType: 'json'
+    dataType: 'json',
+    data: id,
   })
 
   .done(function(json) {
-    console.log(json);
-    var id = $('.main__post').data('id');
 
     var insertHTML = '';
 
@@ -43,7 +44,7 @@ var interval = setInterval(function() {
 
     });
 
-    $('.main__post').prepend(insertHTML);
+    $('.main').append(insertHTML);
 
 
   })

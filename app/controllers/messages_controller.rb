@@ -6,7 +6,7 @@ class MessagesController < ApplicationController
     @messages = @group.messages
     respond_to do |format|
       format.html
-      format.json {render json: {messages: @messages}}
+      format.json
     end
   end
 

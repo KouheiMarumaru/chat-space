@@ -15,14 +15,13 @@
     /チャット表示箇所
     .main
       - @messages.each do |message|
-        .main__post{data: {id: message.id}}
+        .main__post{'data-id': message.id}
           .main__post__name
             = current_user.name
           .main__post__time
             = message.created_at
           .main__post__text
             = message.content
-        / = render partial: "messages/chat", locals:{messages: @message}
 
     /入力箇所
     .footer
